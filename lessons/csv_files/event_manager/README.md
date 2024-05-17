@@ -1,6 +1,6 @@
 # Event Manager
 
-<!-- Turing Backend Module 1: [Lesson Link](https://curriculum.turing.edu/module1/projects/eventmanager) -->
+<!-- Turing SE Module 1: [Lesson Link](https://curriculum.turing.edu/module1/projects/eventmanager) -->
 
 ## Prerequisites
 Before starting this tutorial, you should be comfortable with:
