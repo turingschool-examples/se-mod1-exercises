@@ -1,6 +1,6 @@
 # Practice Midmod Assessment
 
-This is an example of a Midmod Assessment for Turing's Back End Module 1 students to reference and practice.
+This is an example of a Midmod Assessment for Turing's Software Engineering Module 1 students to reference and practice.
 
 ## Assessment Format
 
