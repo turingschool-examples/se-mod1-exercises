@@ -10,8 +10,8 @@ You should fork this repository and then clone YOUR fork to your computer. Make 
 You can confirm that you have cloned the correct repository by running `git remote -v`. You should see something like this:
 
   ```
-  origin	git@github.com:<YOUR_USERNAME>/mod-1-exercises.git (fetch)
-  origin	git@github.com:<YOUR_USERNAME>/mod-1-exercises.git (push)
+  origin	git@github.com:<YOUR_USERNAME>/se-mod1-exercises.git (fetch)
+  origin	git@github.com:<YOUR_USERNAME>/se-mod1-exercises.git (push)
   ```
 
 Each section has its own README to describe how to best use the provided resources. Let's take a look around.
