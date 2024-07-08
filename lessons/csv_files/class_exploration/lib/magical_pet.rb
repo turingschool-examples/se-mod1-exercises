@@ -1,8 +1,8 @@
 class MagicalPet
-  attr_reader :id, :name, :pet_owner_id
-  def initialize(id,name,pet_owner_id)
+  attr_reader :id, :type, :pet_owner_id
+  def initialize(id,type,pet_owner_id)
     @id = id
-    @name = name
+    @type = type
     @pet_owner_id = pet_owner_id
   end
 end
