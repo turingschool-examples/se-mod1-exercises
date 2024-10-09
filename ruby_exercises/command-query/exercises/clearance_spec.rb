@@ -16,7 +16,7 @@ RSpec.describe Clearance do
     expect(clearance.best_deal).to eq('socks')
   end
 
-  it 'has higest percent off many items' do
+  it 'has highest percent off many items' do
     clearance = Clearance.new
     clearance << Item.new('shirt', price: 16, discount: 2)
     clearance << Item.new('pants', price: 10, discount: 5)
