@@ -65,9 +65,3 @@ __or__ running individual tests using `rspec`:
 ```
 rspec unicorn_spec.rb
 ```
-
-### Related Lesson Plan
-
-Meant to be used in combination with the
-[Debugging Techniques](https://github.com/turingschool/lesson_plans/blob/master/ruby_01-object_oriented_programming_with_ruby/debugging.markdown)
-Lesson Plan.
