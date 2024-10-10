@@ -63,7 +63,7 @@ RSpec.describe 'select pattern' do
       sixth: "indigo",
       seventh: "violet"
     }
-    expected(greater_than_four).to eq(expected)
+    expect(greater_than_four).to eq(expected)
   end
 
   xit 'test 5' do

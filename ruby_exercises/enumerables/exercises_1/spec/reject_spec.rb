@@ -22,7 +22,7 @@ RSpec.describe 'reject' do
     expect(remaining).to eq([1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20])
   end
 
-  xit 'remove words longer tghan three letters' do
+  xit 'remove words longer than three letters' do
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
     # Your code goes here
     expect(selected).to eq(["bad", "cat", "dog", "red"])

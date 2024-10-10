@@ -62,7 +62,7 @@ RSpec.describe Wallet do
     expect(wallet.cents).to eq(1)
   end
 
-  xit 'can taake various coins out' do
+  xit 'can take various coins out' do
     wallet = Wallet.new
     wallet << :penny
     wallet << :dime
