@@ -29,9 +29,9 @@ describe "#min/#max/#min_by/#max_by" do
   it "returns the shortest name" do 
     names = ["Leonardo", "Donatello", "Michaelangelo", "Raphael"]
 
-    longest_name = #code
+    shortest_name = #code
 
-    expect(longest_name).to eq("Raphael")
+    expect(shortest_name).to eq("Raphael")
   end
 
   it "returns the name with the lowest associated value" do 
