@@ -1,6 +1,6 @@
 # Intermediate Enumerables Exploration
 
-Use these files to explore these additional enumearbles:
+Use these files to explore these additional enumerables:
 - `.max`
 - `.min`
 - `.max_by`
