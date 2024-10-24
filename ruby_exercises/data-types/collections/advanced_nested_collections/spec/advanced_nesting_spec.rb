@@ -21,7 +21,7 @@ RSpec.describe 'Advanced Nested Collections' do
     expect(employees).to eq(expected)
   end
 
-  xit 'test 2' do
+  it 'test 2' do
     # Find the ingredients for pancakes
     pancake_ingredients = _____
 
@@ -29,7 +29,7 @@ RSpec.describe 'Advanced Nested Collections' do
     expect(pancake_ingredients).to eq(expected)
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     # Find the price of risotto
     risotto_price = ____
 
