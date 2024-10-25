@@ -105,17 +105,44 @@ denver_biscuit_co = {
 
 # Challenge 1:
 # Return the name ("Denver Biscuit")
+# p denver_biscuit_co[:name]
+
 # Return the rating (4.5)
+# p denver_biscuit_co[:rating]
+
 # Return a list of accepted transactions (["pickup", "delivery"])
+# p denver_biscuit_co[:transactions]
+
 # Return the first listed category title ("Sandwiches")
+# p denver_biscuit_co[:categories][0][:title]
+
 # Return the opening hour on Tuesday (day 1) ("0800")
+# p denver_biscuit_co[:hours][0][:open][1][:start]
+
 # Return the closing hour on Saturday (day 5) ("1500")
+# p denver_biscuit_co[:hours][0][:open][5][:end]
+
 # Return the current open status (is_now_open) (true)
+# p denver_biscuit_co[:hours][0][:is_open_now]
 
 # Challenge 2: 
 # Get the address, and return it into a readable format. ("3237 E Colfax Ave, Denver, CO 80206" )
-# Return a list of categories this restaurant fits into (["Sandwiches", "Breakfast & Brunch"])
+street = denver_biscuit_co[:location][:address1]
+city = denver_biscuit_co[:location][:city]
+state = denver_biscuit_co[:location][:state]
+zip_code = denver_biscuit_co[:location][:zip_code]
 
+# p "#{street}, #{city}, #{state} #{zip_code}"
+
+
+# Return a list of categories this restaurant fits into (["Sandwiches", "Breakfast & Brunch"])
+# denver_biscuit_co[:categories][0][:title]
+
+categories = denver_biscuit_co[:categories].map do |category|
+   category[:title]
+    end
+
+# p categories
 
 # Challenge 3 (extra spicy): 
 # Get the operation hours, and format a return value such that it looks like this: 
@@ -139,3 +166,59 @@ denver_biscuit_co = {
 
 # }
 # Note: day 0 is Monday, day 6 is Sunday
+
+#Get the operation hours 
+    #Hash (denver_biscuit_co) > array (hours) with one element that is a hash [0] > array of hashes [:open] > Each hash contains :start and :end hours.
+#Iterate over the array of hashes to get each day's start time. 
+
+start_times = denver_biscuit_co[:hours][0][:open].map do |day|
+   day[:start]
+  end
+
+p start_times
+
+# #Iterate over the array of hashes to get each day's end time. 
+
+end_times = denver_biscuit_co[:hours][0][:open].map do |day|
+    day[:end]
+  end
+
+p end_times
+
+#Creat a new hash
+operation_hours = {}
+
+#Insert the days of the week into the new hash, starting with Monday.
+
+require 'date'
+
+days_of_week = Date::DAYNAMES.rotate(1) #An array of day strings. 
+p days_of_week #returns an array of day strings. 
+
+days_of_week.each do |day| 
+    operation_hours[day] = {
+        
+    }
+end 
+
+p operation_hours
+
+# operation_hours.each do |day, day_hash|
+#     start_times.each do |time|
+#         day_hash[:start] = time
+#     end 
+    
+#     end_times.each do |time|
+#         day_hash[:end] = time
+#     end 
+   
+# end 
+counter = 0
+operation_hours.each do |day, day_hash|
+    # require 'pry'; binding.pry
+    day_hash[:start] = start_times[counter]
+    day_hash[:end] = end_times[counter]
+    counter+=1
+end 
+p operation_hours
+
