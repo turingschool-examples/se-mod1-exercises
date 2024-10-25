@@ -8,7 +8,7 @@ class Potluck
     end 
 
     def add_dish(dish)
-        @dishes.push(dish)!!!
+        @dishes.push(dish)
     end
 
     def get_all_from_category(category)
