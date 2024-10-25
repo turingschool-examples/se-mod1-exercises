@@ -1,5 +1,5 @@
 require 'rspec'
-require '../lib/unicorn'
+require './lib/unicorn'
 
 RSpec.describe Unicorn do
   it 'has a name' do
@@ -11,14 +11,12 @@ RSpec.describe Unicorn do
     unicorn = Unicorn.new('Margaret')
     expect(unicorn.color).to eq('silver')
     expect(unicorn.silver?).to eq(true)
-    expect(unicorn.silver?).to be true
   end
 
   it 'doesnt have to be silver' do
     unicorn = Unicorn.new('Barbara', 'purple')
     expect(unicorn.color).to eq('purple')
     expect(unicorn.silver?).to eq(false)
-    expect(unicorn.silver?).to be false
   end
 
   it 'says sparkly stuff' do
