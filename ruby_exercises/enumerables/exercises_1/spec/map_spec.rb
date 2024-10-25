@@ -8,27 +8,31 @@ RSpec.describe 'map' do
     expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
   end
 
-  xit 'doubles' do
+  it 'doubles' do
     numbers = [1, 2, 3, 4, 5]
     doubles = numbers.map do |number|
-      # Your code goes here
+      number * 2 #remember that its NOT plural otherwise you get a loop of 1,2,3,4,5 repeating
     end
     expect(doubles).to eq([2, 4, 6, 8, 10])
   end
 
-  xit 'squares' do
+  it 'squares' do
     numbers = [1, 2, 3, 4, 5]
-    # Your code goes here
+    squares = numbers.map do |number|
+      number ** 2
+    end
     expect(squares).to eq([1, 4, 9, 16, 25])
   end
 
-  xit 'lengths' do
+  it 'lengths' do
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
-    expect(lengths).to eq([5, 3, 7, 5, 3])
+    lengths = names.map do |name|  # Use 'map' to iterate over each name
+      name.length 
+    end   
+       expect(lengths).to eq([5, 3, 7, 5, 3])
   end
 
-  xit 'normalize zip codes' do
+  it 'normalize zip codes' do
     numbers = [234, 10, 9119, 38881]
     # Your code goes here
     expect(zip_codes).to eq(["00234", "00010", "09119", "38881"])

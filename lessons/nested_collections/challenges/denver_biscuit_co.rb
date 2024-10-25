@@ -105,17 +105,27 @@ denver_biscuit_co = {
 
 # Challenge 1:
 # Return the name ("Denver Biscuit")
+p denver_biscuit_co[:name]
 # Return the rating (4.5)
+p denver_biscuit_co[:rating]
 # Return a list of accepted transactions (["pickup", "delivery"])
+p denver_biscuit_co[:transactions][0..1]
 # Return the first listed category title ("Sandwiches")
+p denver_biscuit_co[:categories][0][:title]
 # Return the opening hour on Tuesday (day 1) ("0800")
+p denver_biscuit_co[:hours][0][:open][0][:start]
 # Return the closing hour on Saturday (day 5) ("1500")
+p denver_biscuit_co[:hours][0][:open][5][:end]
 # Return the current open status (is_now_open) (true)
+p denver_biscuit_co[:hours].first[:is_open_now]
+#  using .first is more readable, especially when you don’t care about indexing directly. 
+#It immediately conveys that you are interested in the first element of the array.
 
 # Challenge 2: 
 # Get the address, and return it into a readable format. ("3237 E Colfax Ave, Denver, CO 80206" )
+p denver_biscuit_co[:location][:display_address].join(",")
 # Return a list of categories this restaurant fits into (["Sandwiches", "Breakfast & Brunch"])
-
+p denver_biscuit_co[:categories].each[:title]
 
 # Challenge 3 (extra spicy): 
 # Get the operation hours, and format a return value such that it looks like this: 

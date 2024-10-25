@@ -1,3 +1,5 @@
+require 'pry'
+
 cities_lived_in = {
     michaela: ["Philadelphia", "Fort Collins", "Seattle"],
     mike: ["Denver", "Santa Fe", "Philadelphia", "Portland"],
@@ -10,8 +12,21 @@ cities_lived_in = {
 # Get a unique list of all of the cities that these humans have lived in  
 # ["Philadelphia", "Fort Collins", "Seattle", "Denver", "Santa Fe", "Portland", "Lansing", "Columbus", "Austin"]
 
+# cities_lived_in = cities_lived_in.values.flatten
+# p cities_lived_in.uniq
 
+# or
 
+# unique_cities = []
+
+# cities_lived_in.each do |person, cities|
+#     cities.each do |city|
+#         if !unique_cities.include?(city)  
+#             unique_cities << city
+#         end
+#     end
+# end
+# p unique_cities
 
 # Problem #2: 
 # Write code that iterates through the `cities_lived_in` hash, and returns a list of  
@@ -21,7 +36,24 @@ cities_lived_in = {
 # or
 # ["Michaela", "Mike", "Alex"]
 
+# philly_residents = []
+# cities_lived_in.each do |person, cities|
+#     if cities.include?("Philadelphia")
+#         philly_residents << person.to_s.capitalize
+#     end
+# end
+# p philly_residents 
 
+# or 
+
+# philly_residents = []
+# cities_lived_in.each do |person, cities|
+#     if cities.include?("Philadelphia")
+#         philly_residents << person.to_s.capitalize
+#     end
+# end
+
+# p philly_residents
 
 
 # Problem #3: 
@@ -38,3 +70,15 @@ cities_lived_in = {
 #     "Columbus => 1,
 #     "Austin" => 1
 # }
+
+population = {}
+cities_lived_in.each do |person, cities|
+    cities.each do |city|
+        if !population[city]
+            population[city] = 1
+        else
+            population[city] += 1
+        end
+    end
+end
+p population

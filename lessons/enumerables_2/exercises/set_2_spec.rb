@@ -5,7 +5,8 @@ describe "#sort/#sort_by" do
   it "sorts the numbers" do 
     numbers = [8, 23, 7, 29, 9, 10]
 
-    sorted_numbers = #your code here 
+    sorted_numbers = numbers.sort
+    p sorted_numbers
 
     expect(sorted_numbers).to eq([7, 8, 9, 10, 23, 29])
   end
@@ -13,7 +14,8 @@ describe "#sort/#sort_by" do
   it "sorts the names alphabetically" do 
     names = ["Leonardo", "Donatello", "Michaelangelo", "Raphael"]
 
-    sorted_names = #code
+    sorted_names = names.sort
+    p sorted_names
 
     expect(sorted_names).to eq(["Donatello", "Leonardo", "Michaelangelo", "Raphael"])
   end
@@ -21,7 +23,10 @@ describe "#sort/#sort_by" do
   it "sorts the names by name length" do 
     names = ["Leonardo", "Donatello", "Michaelangelo", "Raphael"]
 
-    sorted_names = #code
+    sorted_names = names.sort_by do |name|
+      name.length
+    end
+    p sorted_names
 
     expect(sorted_names).to eq(["Raphael", "Leonardo", "Donatello", "Michaelangelo", ])
   end
@@ -35,7 +40,10 @@ describe "#sort/#sort_by" do
         ["Stella", 8]
       ]
   
-    sorted_names = #code here
+    sorted_names = people.sort_by do |person|
+      person[0]
+    end
+    p sorted_names
 
     expect(sorted_names).to eq(["Sofie", "Stella", "Scarlett"])
   end
