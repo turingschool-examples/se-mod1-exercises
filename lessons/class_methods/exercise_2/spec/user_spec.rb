@@ -18,7 +18,7 @@ RSpec.describe User do
         {name: "Brian"},
         {name: "Megan"},
       ]
-    binding.pry ## Can you call User.create_multiple(users) in pry? What does it return?
+    # binding.pry ## Can you call User.create_multiple(users) in pry? What does it return?
     expect(User.create_multiple(users)).to be_a Array
     expect(User.create_multiple(users).length).to eq 3
 
